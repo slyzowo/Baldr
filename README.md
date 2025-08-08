@@ -26,9 +26,8 @@ BOT_ID = "bot-id"
 to run the bot use `node src/index.js`
 
 ## Commands
-- /coinflip
-- /reply
-
+- /echo                 `text goes here!`
+- /whisper-echo         `text goes here!`
 - /add                  `first-num`, `second-num`
 - /divide               `first-num`, `second-num`
 - /exponent             `first-num`, `second-num`
@@ -41,9 +40,15 @@ to run the bot use `node src/index.js`
 - /help
 
 ### Fun
+- /coinflip
 - /diceroll             `min`, `max`
+  - /diceroll d4
+  - /diceroll d6
+  - /diceroll d8
+  - /diceroll d10
+  - /diceroll d12
+  - /diceroll d20
 - /rock-paper-scissors
-- /echo                 `whatever person inputs`
 - /react                `message-id`, `emoji`
 - /poll                 `question`, `option-1`, `option-2`...
 
