@@ -78,6 +78,6 @@ to run the bot use `node src/index.js`
 - /message-purge-all   `channel-id`
 - /self-purge-all      `user-id`
 
-- /autorole         `#role-id`
-- /log              `#channel-id`, `Enable | Disable`
-- /rename-user      `user-id`, `new-nickname`
+- /join-role         `#role-id`
+- /log-event         `#channel-id`, `Enable | Disable`
+- /rename-user       `user-id`, `new-nickname`
