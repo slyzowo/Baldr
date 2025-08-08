@@ -1,25 +1,85 @@
-const { Client, IntentsBitField } = require('discord.js'); // from the discord.js library we're using the Client class and the IntentsBitField class
+// imports Client and Intents from Discord.js
+const {Client, IntentsBitField, EmbedBuilder} = require("discord.js");
+// security 
 require('dotenv').config();
 
 const client = new Client({
-  intents : [
-    IntentsBitField.Flags.Guilds,         // allows for server moderation
-    IntentsBitField.Flags.GuildMembers,   // allows you to see who is inside the server
-    IntentsBitField.Flags.GuildMessages,  // allows you to see what has messages have been sent
-    IntentsBitField.Flags.MessageContent, // allows you to see the message contents
-  ]
-});
+  intents: [                    // Intents are Permissions
+    IntentsBitField.Flags.Guilds,            // see servers
+    IntentsBitField.Flags.GuildMembers,      // see server members
+    IntentsBitField.Flags.GuildMessages,     // read messages i think?
+    IntentsBitField.Flags.MessageContent,    // read messages
+]});
 
-client.on('ready', (c) => {
-  console.log(`${c.user.tag} is online!`);
-});
+client.on("ready", (c) => { console.log(`${c.user.tag} has been started!`); }); // logging Start Sequence
 
-client.on("interactionCreate", (interaction) => {
+client.on("messageCreate", (message) => {
+  if (message.author.bot){ return; } // voids recursion
+  });
+
+client.on("interactionCreate", (interaction) =>{
   if(!interaction.isChatInputCommand()) return;
+  console.log(interaction.commandName); // logs command sent
+
+  if (interaction.commandName === "echo"){ 
+    const userMessage = interaction.options.get("echo-message")?.value;
+    interaction.reply(`${userMessage}`);
+  }
   
-  if(interaction.isChatInputCommand === 'ping'){
-    interaction.reply('pong');
-  };
-});
+  if (interaction.commandName === "whisper-echo"){ 
+    const userMessage = interaction.options.get("whisper-echo-message")?.value;
+    interaction.reply(`${userMessage}`);
+  }
+
+  if (interaction.commandName === "embed"){ 
+
+    const embedTitle = interaction.options.get("embed-title")?.value;
+    const embedDescription = interaction.options.get("embed-description")?.value;
+
+    const embed = new EmbedBuilder()
+    .addFields({
+      name: `${embedTitle}`, 
+      value: `${embedDescription}`});
+    interaction.reply({ embeds: [ embed ]});
+  }
+
+  if (interaction.commandName === "add"){ 
+    const num1 = interaction.options.get("first-number")?.value;
+    const num2 = interaction.options.get("second-number")?.value;
+    interaction.reply(`The result of ${num1} + ${num2} = ${num1 + num2}`);
+  }
+
+  if (interaction.commandName === "subtract"){ 
+    const num1 = interaction.options.get("first-number")?.value;
+    const num2 = interaction.options.get("second-number")?.value;
+    interaction.reply(`The result of ${num1} + ${num2} = ${num1 - num2}`);
+  }
+
+  if (interaction.commandName === "multiply"){ 
+    const num1 = interaction.options.get("first-number")?.value;
+    const num2 = interaction.options.get("second-number")?.value;
+    interaction.reply(`The result of ${num1} + ${num2} = ${num1 * num2}`);
+  }
+
+  if (interaction.commandName === "divide"){ 
+    const num1 = interaction.options.get("first-number")?.value;
+    const num2 = interaction.options.get("second-number")?.value;
+    interaction.reply(`The result of ${num1} + ${num2} = ${num1 / num2}`);
+  }
+
+  if (interaction.commandName === "coinflip"){ 
+    
+    let randnum = Math.floor(Math.random() * 1);
+    if(randnum = 0){
+      interaction.reply(`Heads`);
+    }
+    if(randnum = 1){
+      interaction.reply(`Tails`);
+    }
+    if(randnum > 1){
+      interaction.reply(`Error, Random number is above 1`);
+    }
+  }
+})
 
 client.login(process.env.TOKEN);
