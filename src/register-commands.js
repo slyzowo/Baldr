@@ -42,7 +42,7 @@ options: [{
   description: "the first number",
   type: ApplicationCommandOptionType.Number,
   required: true,
-},{
+  },{
   name: "second-number",
   description: "the second number",
   type: ApplicationCommandOptionType.Number,
@@ -56,7 +56,7 @@ options: [{
   description: "the first number",
   type: ApplicationCommandOptionType.Number,
   required: true,
-},{
+  },{
   name: "second-number",
   description: "the second number",
   type: ApplicationCommandOptionType.Number,
@@ -70,12 +70,13 @@ options: [{
   description: "the first number",
   type: ApplicationCommandOptionType.Number,
   required: true,
-},{
+  },{
   name: "second-number",
   description: "the second number",
   type: ApplicationCommandOptionType.Number,
   required: true,
 }]},
+
 {name : "divide",
 description : "divides two numbers",
 options: [{
@@ -83,7 +84,7 @@ options: [{
   description: "the first number",
   type: ApplicationCommandOptionType.Number,
   required: true,
-},{
+  },{
   name: "second-number",
   description: "the second number",
   type: ApplicationCommandOptionType.Number,
