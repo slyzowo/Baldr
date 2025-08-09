@@ -1,5 +1,5 @@
 ## Baldr
-An open source discord app
+An open source discord app made as an alternative to the bigger discord apps
 
 ## Dependancies
 - [Node.js](https://nodejs.org/)
@@ -16,11 +16,20 @@ Install dotenv from npm or by using :
 
 `npm install dotenv`
 
-Create a .env file and add the following arguments 
+Create a `.env` file and add the following arguments 
 ```
 TOKEN = "bot-token"
 GUILD_ID = "guild-id"
 BOT_ID = "bot-id"
+```
+
+Create a `.json` file called "config" and add
+```
+{
+  "testServer": "testing-server-id",
+  "clientID": "bot-id",
+  "devs": ["developer-id"]
+}
 ```
 
 to run the bot use `node src/index.js`
