@@ -1,39 +1,6 @@
 ## Baldr
 An open source discord app made as an alternative to the bigger discord apps
 
-## Dependancies
-- [Node.js](https://nodejs.org/)
-- [Discord.js](https://discord.js.org/)
-- [Dotenv](https://www.npmjs.com/package/dotenv)
-
-## Installation
-Install node.js from nodejs.org
-Install discord.js from discordjs.org or by using :
-
-`npm install discord.js`
-
-Install dotenv from npm or by using :
-
-`npm install dotenv`
-
-Create a `.env` file and add the following arguments 
-```
-TOKEN = "bot-token"
-GUILD_ID = "guild-id"
-BOT_ID = "bot-id"
-```
-
-Create a `.json` file called "config" and add
-```
-{
-  "testServer": "testing-server-id",
-  "clientID": "bot-id",
-  "devs": ["developer-id"]
-}
-```
-
-to run the bot use `node src/index.js`
-
 ## Commands
 - /echo                 `text goes here!`
 - /whisper-echo         `text goes here!`
@@ -90,3 +57,40 @@ to run the bot use `node src/index.js`
 - /join-role         `#role-id`
 - /log-event         `#channel-id`, `Enable | Disable`
 - /rename-user       `user-id`, `new-nickname`
+
+## Installation
+
+If you would like to self host an instance of this, follow these instructions.
+
+### 1. Dependancies
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+
+Install node.js from [Node.js](https://nodejs.org/)
+Install discord.js from [Discord.js](https://discord.js.org/) or by using :
+
+`npm install discord.js` | `npm i discord.js`
+
+Install dotenv from [Dotenv](https://www.npmjs.com/package/dotenv) or by using :
+
+`npm install dotenv` | `npm i dotenv`
+
+### 2. Creating sensitive files
+
+Create a `.env` file and add the following arguments 
+```
+TOKEN = "bot-token"
+GUILD_ID = "guild-id"
+BOT_ID = "bot-id"
+```
+
+Create a `.json` file called "config" and add
+```
+{
+  "testServer": "testing-server-id",
+  "clientID": "bot-id",
+  "devs": ["developer-id"]
+}
+```
+### 3. Starting the bot
+
+to run the bot use `node src/index.js`
