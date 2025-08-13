@@ -1,3 +1,5 @@
 /node_modules
 .env
 src/config.json
+src/index.html
+src/theme.css

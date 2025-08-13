@@ -60,14 +60,14 @@ If you encounter a problem please go to our [Discord server](https://discord.gg/
 - /log-event         `#channel-id`, `Enable | Disable`
 - /rename-user       `user-id`, `new-nickname`
 
-## Installation
+## Installation for Self-Hosting
 
 If you would like to self host an instance of this, follow these instructions.
 
 ### 1. Dependancies
-- [Dotenv](https://www.npmjs.com/package/dotenv)
 
 Install node.js from [Node.js](https://nodejs.org/)
+
 Install discord.js from [Discord.js](https://discord.js.org/) or by using :
 
 `npm install discord.js` | `npm i discord.js`
@@ -76,7 +76,7 @@ Install dotenv from [Dotenv](https://www.npmjs.com/package/dotenv) or by using :
 
 `npm install dotenv` | `npm i dotenv`
 
-### 2. Creating sensitive files
+### 2. Creating Sensitive Files
 
 Create a `.env` file and add the following arguments 
 ```
@@ -85,7 +85,7 @@ GUILD_ID = "guild-id"
 BOT_ID = "bot-id"
 ```
 
-Create a `.json` file called "config" and add
+Create a `.json` file called "config" and add this information
 ```
 {
   "testServer": "testing-server-id",
@@ -94,5 +94,7 @@ Create a `.json` file called "config" and add
 }
 ```
 ### 3. Starting the bot
+> [!WARNING]
+> This is temporary as it's not user friendly, and I wanna make a cool dashboard :3
 
-to run the bot use `node src/index.js`
+To run the bot use `node src/index.js` to run
