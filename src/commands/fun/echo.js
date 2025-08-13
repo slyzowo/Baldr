@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'timeout',
-  description: 'times out someone',
+  name: 'echo',
+  description: 'echos your message',
   devOnly: Boolean,
   testOnly: Boolean,
 

@@ -16,25 +16,30 @@ If you encounter a problem please go to our [Discord server](https://discord.gg/
 
 ### Information
 - /help
+- /ping
 
 ### Fun
 - /coinflip
 - /diceroll             `min`, `max`
-  - /diceroll d4
-  - /diceroll d6
-  - /diceroll d8
-  - /diceroll d10
-  - /diceroll d12
-  - /diceroll d20
+- /d4
+- /d6
+- /d8
+- /d10
+- /d12
+- /d20
 - /rock-paper-scissors
 - /react                `message-id`, `emoji`
 - /poll                 `question`, `option-1`, `option-2`...
 
-### Administration
+### Moderation
 
 - /ban              `@user-id`, `reason`
+- /unban             `@user-id`
+
 - /kick             `@user-id`, `reason`
+
 - /timeout          `@user-id`, `duration`
+- /untimeout         `@user-id`
 
 - /category-create  `category-name`
 - /category-rename  `category-id`

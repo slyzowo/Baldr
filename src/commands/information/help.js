@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'timeout',
-  description: 'times out someone',
+  name: 'help',
+  description: 'provides some information about the bot',
   devOnly: Boolean,
   testOnly: Boolean,
 
