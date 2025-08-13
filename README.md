@@ -1,6 +1,8 @@
 ## Baldr
 An open source discord app made as an alternative to the bigger discord apps
 
+If you encounter a problem please go to our [Discord server](https://discord.gg/CdEaxbKyVN)
+
 ## Commands
 - /echo                 `text goes here!`
 - /whisper-echo         `text goes here!`
