@@ -5,12 +5,7 @@ If you encounter a problem please go to our [Discord server](https://discord.gg/
 
 ## Commands
 
-### Math
-- /add                  `first-num`, `second-num`
-- /divide               `first-num`, `second-num`
-- /exponent             `first-num`, `second-num`
-- /multiply             `first-num`, `second-num`
-- /subtract             `first-num`, `second-num`
+### Economy
 
 ### Information
 - /help
@@ -31,7 +26,13 @@ If you encounter a problem please go to our [Discord server](https://discord.gg/
 - /react                `message-id`, `emoji`
 - /poll                 `question`, `option-1`, `option-2`...
 
-### Economy
+
+### Math
+- /add                  `first-num`, `second-num`
+- /divide               `first-num`, `second-num`
+- /exponent             `first-num`, `second-num`
+- /multiply             `first-num`, `second-num`
+- /subtract             `first-num`, `second-num`
 
 ### Moderation
 - /ban                 `@user-id`, `reason`
